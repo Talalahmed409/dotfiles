@@ -1,0 +1,44 @@
+[opener]
+nvim = [
+  { run = 'nvim "$@"', block = true, desc = "Neovim" },
+]
+okular = [
+  { run = 'okular "$@"', block = false, desc = "Okular" },
+]
+edge = [
+  { run = 'microsoft-edge-stable "$@"', block = false, desc = "Edge" },
+]
+image = [
+  { run = 'xdg-open "$@"', block = false },
+]
+video = [
+  { run = 'xdg-open "$@"', block = false },
+]
+default = [
+  { run = 'xdg-open "$@"', block = false },
+]
+
+[open]
+prepend_rules = [
+  # Match .cbz by name (catches before MIME resolution)
+  { name = "*.cbz", use = "okular" },
+  # Also match all the MIME types a .cbz might be detected as
+  { mime = "application/x-cbz", use = "okular" },
+  { mime = "application/vnd.comicbook+zip", use = "okular" },
+  { mime = "application/zip", use = "okular" },  # <-- key addition
+
+  # PDFs
+  { mime = "application/pdf", use = "edge" },
+]
+
+rules = [
+  { name = "*.json", use = "nvim" },
+  { mime = "text/*", use = "nvim" },
+  { mime = "image/*", use = "image" },
+  { mime = "video/*", use = "video" },
+  { mime = "application/*", use = "nvim" },
+  { use = "default" }
+]
+
+[manager]
+ratio = [1, 3, 4]

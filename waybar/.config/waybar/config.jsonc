@@ -1,0 +1,119 @@
+{
+  "reload_style_on_change": true,
+  "layer": "top",
+  "position": "top",
+  "spacing": 0,
+  "height": 25,
+  "modules-left": [
+    "hyprland/workspaces"
+  ],
+  "modules-center": [
+    "mpris"
+  ],
+  "modules-right": [
+    "group/tray-drawer",
+    "custom/screenrecording-indicator",
+    "cpu",
+    "memory",
+    "network",
+    "bluetooth",
+    "pulseaudio",
+    "battery",
+    "clock"
+  ],
+  "hyprland/workspaces": {
+    "disable-scroll": false,
+    "all-outputs": true,
+    "format": "{name}",
+    "on-click": "activate"
+  },
+  "hyprland/submap": {
+    "format": "<span style=\"italic\">{}</span>"
+  },
+  "group/tray-drawer": {
+    "orientation": "horizontal",
+    "drawer": {
+      "transition-duration": 200
+    },
+    "modules": [
+      "custom/expand",
+      "tray"
+    ]
+  },
+  "custom/expand": {
+    "format": "❮",
+    "tooltip": false
+  },
+  "custom/screenrecording-indicator": {
+    "on-click": "~/Scripts/screenrecord",
+    "exec": "~/Scripts/indicator-record",
+    "signal": 8,
+    "return-type": "json"
+  },
+  "bluetooth": {
+    "format": "BT {status}",
+    "format-connected": "BT {device_alias}",
+    "format-connected-battery": "BT {device_alias} {device_battery_percentage}%",
+    "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+    "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+    "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
+    "on-click": "exec blueman-manager"
+  },
+  "cpu": {
+    "interval": 2,
+    "format": "CPU {usage}%",
+    "on-click": "kitty -e btop"
+  },
+  "memory": {
+    "format": "MEM {used:0.1f}gb",
+    "interval": 2,
+    "on-click": "kitty -e btop"
+  },
+  "clock": {
+    "format": "{:%I:%M %p}",
+    "format-alt": "{:L%A %d %B}",
+    "tooltip": false
+  },
+  "network": {
+    "format-wifi": "WIFI {essid}",
+    "format-ethernet": "eth {ifname}",
+    "format-disconnected": "WIFI --",
+    "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+    "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+    "tooltip-format-disconnected": "Disconnected",
+    "interval": 3,
+    "on-click": "nm-applet"
+  },
+  "battery": {
+    "format": "BAT {capacity}%",
+    "format-discharging": "BAT {capacity}%",
+    "format-charging": "BAT {capacity}%",
+    "format-plugged": "BAT {capacity}%",
+    "tooltip-format-discharging": "{power:>1.0f}W↓ {capacity}%",
+    "tooltip-format-charging": "{power:>1.0f}W↑ {capacity}%",
+    "interval": 5,
+    "states": {
+      "warning": 20,
+      "critical": 10
+    }
+  },
+  "pulseaudio": {
+    "format": "VOL {volume}%",
+    "on-click": "pavucontrol",
+    "on-click-right": "pamixer -t",
+    "tooltip-format": "VOL {volume}%",
+    "scroll-step": 5,
+    "format-muted": "VOL muted"
+  },
+  "tray": {
+    "icon-size": 12,
+    "spacing": 4
+  },
+  "mpris": {
+    "format": "{artist} • {title}",
+    "format-paused": "{artist} • {title}",
+    "format-stopped": "",
+    "max-length": 55
+  }
+}
