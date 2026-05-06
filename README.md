@@ -2,7 +2,7 @@
 
 minimal hyprland setup — managed with [gnu stow](https://www.gnu.org/software/stow/)
 
-![screenshot placeholder](./screenshot.png)
+![screenshot placeholder](./.screenshot.png)
 
 ---
 
