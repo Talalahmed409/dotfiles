@@ -194,7 +194,7 @@ alias audiofix='systemctl --user restart pipewire pipewire-pulse wireplumber'
 alias cp='cpg -g'
 alias mv='mvg -g'
 alias vpn='sudo openvpn --config ~/Downloads/profile-userlocked.ovpn'
-alias bat='upower -i /org/freedesktop/UPower/devices/battery_BAT0'
+alias batstat='upower -i /org/freedesktop/UPower/devices/battery_BAT0'
 alias speed='speedtest-cli'
 alias t='tmux'
 
