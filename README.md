@@ -8,16 +8,20 @@ minimal hyprland setup — managed with [gnu stow](https://www.gnu.org/software/
 
 ## components
 
-| tool | role |
-|------|------|
-| [hyprland](https://hyprland.org) | wayland compositor |
-| [waybar](https://github.com/Alexays/Waybar) | status bar |
-| [kitty](https://sw.kovidgoyal.net/kitty/) | terminal |
-| [nvim](https://neovim.io) | editor |
-| [yazi](https://github.com/sxyazi/yazi) | file manager |
-| [fuzzel](https://codeberg.org/dnkl/fuzzel) | app launcher |
-| [cava](https://github.com/karlstav/cava) | audio visualizer |
-| zsh + tmux | shell & multiplexer |
+| tool                                                    | role                |
+| ------------------------------------------------------- | ------------------- |
+| [hyprland](https://hyprland.org)                        | wayland compositor  |
+| [waybar](https://github.com/Alexays/Waybar)             | status bar          |
+| [kitty](https://sw.kovidgoyal.net/kitty/)               | terminal            |
+| [nvim](https://neovim.io)                               | editor              |
+| [yazi](https://github.com/sxyazi/yazi)                  | file manager        |
+| [fuzzel](https://codeberg.org/dnkl/fuzzel)              | app launcher        |
+| [cava](https://github.com/karlstav/cava)                | audio visualizer    |
+| [fastfetch](https://github.com/fastfetch-cli/fastfetch) | system stats        |
+| [mako](https://github.com/emersion/mako)                | notification daemon |
+| [mpv](https://mpv.io/)                                  | media viewer        |
+| [zed](https://zed.dev/)                                 | IDE                 |
+| zsh + tmux                                              | shell & multiplexer |
 
 ---
 
