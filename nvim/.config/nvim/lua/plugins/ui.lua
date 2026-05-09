@@ -1,24 +1,37 @@
 -- UI enhancements
 return {
-  -- Color highlighter
-  {
-    "norcalli/nvim-colorizer.lua",
-    config = function()
-      require("colorizer").setup({ "*" }, {
-        RGB = true, -- #RGB hex codes
-        RRGGBB = true, -- #RRGGBB hex codes
-        names = true, -- "Name" codes like Blue
-        RRGGBBAA = true, -- #RRGGBBAA hex codes
-        rgb_fn = true, -- CSS rgb() and rgba() functions
-        hsl_fn = true, -- CSS hsl() and hsla() functions
-        css = true, -- Enable all CSS features: rgb_fn, hsl_fn, names, RGB, RRGGBB
-        css_fn = true, -- Enable all CSS *functions*: rgb_fn, hsl_fn
-      })
-    end,
-  },
+{
+  "uga-rosa/ccc.nvim",
+  event = "VeryLazy",
+  config = function()
+    local ccc = require("ccc")
 
-  -- focus mode (hide everything except the the file)
-  {
+    ccc.setup({
+      -- Enable the color highlighter
+      highlighter = {
+        auto_enable = true,
+        lsp = true, -- also highlight LSP color hints if available
+        filetypes = {}, -- empty = all filetypes
+        excludes = {},
+        events = { "WinScrolled", "TextChanged", "TextChangedI", "BufEnter" },
+      },
+      -- Optional: set up keymaps for the color picker
+      mappings = {
+        ["q"] = ccc.mapping.quit,
+        ["<CR>"] = ccc.mapping.complete,
+        ["l"] = ccc.mapping.increase1,
+        ["h"] = ccc.mapping.decrease1,
+        ["L"] = ccc.mapping.increase5,
+        ["H"] = ccc.mapping.decrease5,
+      },
+    })
+  end,
+  keys = {
+    { "<leader>cp", "<cmd>CccPick<cr>", desc = "Color Picker" },
+    { "<leader>ch", "<cmd>CccHighlighterToggle<cr>", desc = "Color Highlighter Toggle" },
+  },
+}
+,{
     "folke/zen-mode.nvim",
     cmd = "ZenMode",
     opts = {
@@ -74,7 +87,7 @@ return {
                 window = {
                   winblend = 0,
                   normal_hl = "FloatBorder",
-                  override_vim_notify = false, -- let mini.notify handle vim.notify
+                  -- override_vim_notify = false, -- let mini.notify handle vim.notify
                 },
               },
             },
@@ -152,7 +165,7 @@ return {
         window = {
           winblend = 0,
           normal_hl = "FloatBorder",
-          override_vim_notify = false, -- let mini.notify handle vim.notify
+          -- override_vim_notify = false, -- let mini.notify handle vim.notify
         },
       },
     },

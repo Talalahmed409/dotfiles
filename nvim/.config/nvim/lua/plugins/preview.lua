@@ -1,13 +1,13 @@
 -- Preview tools
 return {
-  -- HTML preview
-  {
-    "barrett-ruth/live-server.nvim",
-    build = "npm install -g live-server",
-    cmd = { "LiveServerStart", "LiveServerStop" },
-    config = true,
-  },
-
+  -- -- HTML preview
+  -- {
+  --   "barrett-ruth/live-server.nvim",
+  --   build = "npm install -g live-server",
+  --   cmd = { "LiveServerStart", "LiveServerStop" },
+  --   config = true,
+  -- },
+  --
   -- Markdown preview
   {
     "toppair/peek.nvim",
