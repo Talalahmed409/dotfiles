@@ -30,7 +30,7 @@ minimal hyprland setup — managed with [gnu stow](https://www.gnu.org/software/
 ```bash
 git clone https://github.com/Talalahmed409/dotfiles.git ~/dotfiles
 cd ~/dotfiles
-stow --target=$HOME .
+stow --target=$HOME */
 ```
 
 > make sure [gnu stow](https://www.gnu.org/software/stow/) is installed: `sudo pacman -S stow`
