@@ -1,0 +1,23 @@
+id = "one-dark-pro-max"
+name = "One Dark Pro Max"
+version = "0.0.2"
+schema_version = 1
+description = "One Dark Pro Max/Glass theme for Zed :)"
+repository = "https://github.com/kussumma/one-dark-pro-max"
+authors = ["Kusuma", "BoyeDarat"]
+themes = ["themes/one-dark-pro-max.json", "themes/one-dark-pro-glass.json"]
+icon_themes = []
+languages = []
+capabilities = []
+
+[lib]
+
+[grammars]
+
+[language_servers]
+
+[context_servers]
+
+[agent_servers]
+
+[slash_commands]
