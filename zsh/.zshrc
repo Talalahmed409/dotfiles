@@ -51,7 +51,7 @@ fi
 # Language runtimes (lazy-loaded)
 
 # --------------------------------------------------
-
+export GOPATH="$HOME/.local/share/go"
 export PYENV_ROOT="$HOME/.pyenv"
 
 pyenv() {
@@ -70,12 +70,15 @@ pyenv "$@"
 typeset -U path
 
 path=(
-"$PYENV_ROOT/bin"
-"$HOME/.local/bin"
-"$HOME/.npm-global/bin"
-"$HOME/.spicetify"
-/usr/bin
-$path
+    "$PYENV_ROOT/bin"
+    "$HOME/.local/bin"
+    "$HOME/.npm-global/bin"
+    "$HOME/.spicetify"
+    "$GOPATH/bin"
+    /usr/local/bin
+    /usr/bin
+    /bin
+    $path
 )
 export PATH
 
