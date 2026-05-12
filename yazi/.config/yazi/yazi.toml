@@ -3,16 +3,16 @@ nvim = [
   { run = 'nvim "$@"', block = true, desc = "Neovim" },
 ]
 okular = [
-  { run = 'okular "$@"', block = false, desc = "Okular" },
+  { run = 'okular "$@"', block = false, orphan = true, desc = "Okular" },
 ]
 edge = [
-  { run = 'microsoft-edge-stable "$@"', block = false, desc = "Edge" },
+  { run = 'microsoft-edge-stable "$@"', block = false, orphan = true, desc = "Edge" },
 ]
 image = [
   { run = 'xdg-open "$@"', block = false },
 ]
 video = [
-  { run = 'xdg-open "$@"', block = false },
+  { run = 'xdg-open "$@"', orphan = true, block = false },
 ]
 default = [
   { run = 'xdg-open "$@"', block = false },
@@ -20,25 +20,14 @@ default = [
 
 [open]
 prepend_rules = [
-  # Match .cbz by name (catches before MIME resolution)
-  { name = "*.cbz", use = "okular" },
-  # Also match all the MIME types a .cbz might be detected as
-  { mime = "application/x-cbz", use = "okular" },
-  { mime = "application/vnd.comicbook+zip", use = "okular" },
-  { mime = "application/zip", use = "okular" },  # <-- key addition
-
-  # PDFs
   { mime = "application/pdf", use = "edge" },
-]
-
-rules = [
-  { name = "*.json", use = "nvim" },
+  { url = "*.{cbr,cbz}", use = "okular" },
+  # Text & config files
   { mime = "text/*", use = "nvim" },
-  { mime = "image/*", use = "image" },
-  { mime = "video/*", use = "video" },
-  { mime = "application/*", use = "nvim" },
-  { use = "default" }
+  { mime = "application/json", use = "nvim" },
+  { mime = "application/xml", use = "nvim" },
+  { mime = "application/javascript", use = "nvim" },
+  { mime = "application/x-shellscript", use = "nvim" },
+  # Programming files by extension (fallback for undetected mimes)
+  { url = "*.{py,rs,go,c,cpp,h,hpp,java,kt,rb,php,swift,ts,tsx,jsx,vue,lua,vim,toml,yaml,yml,ini,cfg,conf,md,rst,txt,sh,bash,zsh,fish,css,scss,html,htm,sql}", use = "nvim" },
 ]
-
-[manager]
-ratio = [1, 3, 4]
