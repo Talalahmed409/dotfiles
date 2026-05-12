@@ -19,6 +19,7 @@
     "bluetooth",
     "pulseaudio",
     "battery",
+    "keyboard-state",
     "clock"
   ],
   "hyprland/workspaces": {
@@ -84,6 +85,9 @@
     "tooltip-format-disconnected": "Disconnected",
     "interval": 3,
     "on-click": "nm-applet"
+  },
+  "keyboard-state": {
+    "format": "{layout}"
   },
   "battery": {
     "format": "BAT {capacity}%",

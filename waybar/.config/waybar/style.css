@@ -18,7 +18,7 @@
   color: @waybar-fg;
   border: none;
   border-radius: 0;
-  font-family: "Inter";
+  font-family: "Noto Sans", "Noto Sans Arabic", "Inter";
   font-size: 11px;
 }
 
@@ -91,9 +91,10 @@ window#waybar {
 #custom-expand,
 #mpris,
 #clock,
+#language,
 #custom-idle-indicator,
 #custom-dnd-indicator {
-  padding: 0 6px;
+  padding: 0 5px;
   font-weight: 600;
   opacity: 1;
   transition: opacity 150ms ease;
