@@ -13,7 +13,7 @@ hl.config({
 		touchpad = {
 			natural_scroll = true,
 			disable_while_typing = true,
-			scroll_factor = 0.07,
+			scroll_factor = 0.45,
 			drag_lock = false,
 		},
 	},
