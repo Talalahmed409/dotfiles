@@ -19,7 +19,7 @@
     "bluetooth",
     "pulseaudio",
     "battery",
-    "keyboard-state",
+    "hyprland/language",
     "clock"
   ],
   "hyprland/workspaces": {
@@ -86,8 +86,10 @@
     "interval": 3,
     "on-click": "nm-applet"
   },
-  "keyboard-state": {
-    "format": "{layout}"
+  "hyprland/language": {
+    "format": "  {}",
+    "format-en": "EN",
+    "format-ar": "AR"
   },
   "battery": {
     "format": "BAT {capacity}%",
