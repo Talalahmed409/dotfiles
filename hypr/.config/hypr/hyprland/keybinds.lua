@@ -72,7 +72,7 @@ hl.bind(mainMod .. " + SHIFT + DOWN", hl.dsp.window.move({ direction = "down" })
 
 hl.bind(mainMod .. " + S", hl.dsp.workspace.toggle_special("special"))
 
-hl.bind(mainMod .. " + ALT + S", hl.dsp.window.move({ workspace = "special:special" }))
+hl.bind(mainMod .. " + ALT + S", hl.dsp.window.move({ workspace = "special:special" , follow = false }))
 
 hl.bind("CTRL + " .. mainMod .. " + SHIFT + UP", hl.dsp.window.move({ workspace = "special:special" }))
 
