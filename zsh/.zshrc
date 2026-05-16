@@ -39,7 +39,7 @@ CURRENT_SESSION="${XDG_SESSION_DESKTOP:-$XDG_CURRENT_DESKTOP}"
 if [[ "$CURRENT_SESSION" == "Hyprland" ]]; then
 export QT_QPA_PLATFORMTHEME="qt5ct"
 export QT_QPA_PLATFORM="wayland;xcb"
-export XCURSOR_THEME="Bibata-Modern-Ice"
+export XCURSOR_THEME="Breeze Dark"
 export XCURSOR_SIZE=24
 export LIBVA_DRIVER_NAME="radeonsi"
 export AMD_VULKAN_ICD="RADV"

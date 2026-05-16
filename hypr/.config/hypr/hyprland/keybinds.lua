@@ -9,10 +9,10 @@ local terminal = "kitty"
 hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(terminal))
 local closeWindowBind = hl.bind(mainMod .. " + Q", hl.dsp.window.close())
 -- closeWindowBind:set_enabled(false)
-hl.bind(
-	mainMod .. " + M",
-	hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'")
-)
+-- hl.bind(
+-- 	mainMod .. " + M",
+-- 	hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'")
+-- )
 hl.bind(mainMod .. " + A", hl.dsp.exec_cmd("pkill fuzzel || fuzzel"))
 hl.bind(mainMod .. " + N", hl.dsp.exec_cmd("kitty -e nvim"))
 hl.bind(mainMod .. " + F", hl.dsp.exec_cmd("zen-browser"))
