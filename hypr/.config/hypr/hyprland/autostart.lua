@@ -24,5 +24,5 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd("nm-applet --indicator")
 	hl.exec_cmd("waybar")
 	--
-	hl.exec_cmd("hyprctl setcursor Breeze Dark 24")
+	hl.exec_cmd("hyprctl setcursor breeze-dark 24")
 end)

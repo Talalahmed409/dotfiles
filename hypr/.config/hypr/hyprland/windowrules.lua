@@ -62,11 +62,18 @@ hl.window_rule({
 	no_blur = true,
 })
 
--- System Utilities (Pavucontrol, Blueman, etc.)
 hl.window_rule({
-	name = "utils-float",
-	match = { class = "^(org\\.pulseaudio\\.pavucontrol|nwg-look|blueman-manager|nm-connection-editor)$" },
+	name = "utils-float-apps",
+	match = { class = "^(org%.pulseaudio%.pavucontrol|nwg-look|nm-connection-editor)$" },
 	float = true,
+})
+
+hl.window_rule({
+	name = "blueman-float",
+	match = { class = "^(blueman-manager)$" },
+	float = true,
+	size = "600 450", -- Sets a specific pixel size (Width Height)
+	center = true, -- Centers it on the screen so it doesn't spawn in a corner
 })
 
 -- Media (mpv)

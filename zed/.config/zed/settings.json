@@ -13,7 +13,7 @@
   "session": {
     "trust_all_worktrees": true
   },
-  "vim_mode": false,
+  "vim_mode": true,
   "agent_servers": {
     "cursor": {
       "type": "registry"
