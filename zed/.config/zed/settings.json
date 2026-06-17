@@ -7,6 +7,16 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "agent": {
+    "default_model": {
+      "provider": "zed.dev",
+      "model": "claude-sonnet-4-5",
+      "enable_thinking": true
+    },
+    "favorite_models": [],
+    "default_profile": "write",
+    "model_parameters": []
+  },
   "git_panel": {
     "tree_view": true
   },
