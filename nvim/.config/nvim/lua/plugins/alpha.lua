@@ -508,9 +508,10 @@ return {
       --dashboard.button("p", "λ  > Projects", ":lua require('mini.files').open('~/Projects')<CR>"),
       --dashboard.button("s", "󰯂  > Browse scripts", ":e ~/Scripts/<CR>"),
       -- dashboard.button("r", "  > Browse src", ":e ~/.local/src/<CR>"),
-      -- dashboard.button("q", "󰅙  Quit", ":q!<CR>"),
+      dashboard.button("q", "󰅙  Quit", ":q!<CR>"),
       -- λ Ϡ Ϯ ϗ Ξ Ψ
-      vim.api.nvim_buf_set_keymap(0, "n", "q", ":q<CR>", { noremap = true, silent = true }),
+      -- vim.api.nvim_buf_set_keymap(0, "n", "q", ":q<CR>", { noremap = true, silent = true }),
+      -- vim.keymap.set("n", "q", "<cmd>q<CR>", { buffer = true, silent = true }),
     }
 
     dashboard.section.footer.opts.position = "center"

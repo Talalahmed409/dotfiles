@@ -1,0 +1,5 @@
+-- save, quit
+ set("n", "<leader>w", "<cmd> w <cr>", opts)
+ set("n", "<leader>sn", ":<cmd>noautocmd w <cr>", opts)
+ set("n", "<leader>qq", "<cmd> q <cr>" ,opts)
+

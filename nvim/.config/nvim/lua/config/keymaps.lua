@@ -52,11 +52,6 @@ set("v", ">", ">gv", opts)
 -- Toggle line wrapping
 set("n", "<leader>lw", "<cmd>set wrap!<CR>", opts)
 
--- save, quit
-set("n", "<leader>w", "<cmd> w <cr>", opts)
-set("n", "<leader>sn", ":<cmd>noautocmd w <cr>", opts)
--- set("n", "<leader>qq", "<cmd> q <cr>" ,opts)
-
 -- move a blocks of text up/down with K/J in visual mode
 set("v", "K", ":m '<-2<CR>gv=gv", { silent = true })
 set("v", "J", ":m '>+1<CR>gv=gv", { silent = true })
@@ -125,3 +120,10 @@ set("n", "<leader>tf", ":ToggleAutoformat<CR>", { desc = "Toggle format on save"
 
 -- Markdown render
 set("n", "<leader>pt", ":RenderMarkdown toggle<CR>", { desc = "Toggle Markdown Render" })
+
+-- disable copy to system clipboard on deletion
+-- Make d and dd send data to the black hole by default
+vim.keymap.set({ "n", "v" }, "d", '"_d')
+
+-- Remap <leader>d to explicitly cut to the default/system clipboard
+vim.keymap.set({ "n", "v" }, "<leader>d", '""d', { desc = "Cut to system clipboard" })
