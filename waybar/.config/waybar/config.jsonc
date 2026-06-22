@@ -88,8 +88,8 @@
   },
   "hyprland/language": {
     "format": "  {}",
-    "format-en": "EN",
-    "format-ar": "AR"
+    "format-en": " EN",
+    "format-ar": " AR"
   },
   "battery": {
     "format": "BAT {capacity}%",
