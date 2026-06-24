@@ -64,7 +64,13 @@ hl.window_rule({
 
 hl.window_rule({
 	name = "utils-float-apps",
-	match = { class = "^(org%.pulseaudio%.pavucontrol|nwg-look|nm-connection-editor)$" },
+	match = { class = "^(nwg-look|nm-connection-editor)$" },
+	float = true,
+})
+
+hl.window_rule({
+	name = "volume float",
+	match = { class = "^org\\.pulseaudio\\.pavucontrol$" },
 	float = true,
 })
 
