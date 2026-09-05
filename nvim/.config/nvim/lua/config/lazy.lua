@@ -13,7 +13,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 -- Config
-require "config.options"
+-- require "config.options"
 require "config.keymaps"
 require "config.autocmd"
 
@@ -23,6 +23,8 @@ require "custom.terminal"
 
 require("lazy").setup {
   spec = {
+    { "LazyVim/LazyVim", import = "lazyvim.plugins" },
+    { import = "lazyvim.plugins.extras.lang.php" },
     { import = "plugins" },
   },
   rtp = {

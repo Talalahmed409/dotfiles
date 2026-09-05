@@ -1,33 +1,40 @@
 [opener]
 nvim = [
-  { run = 'nvim "$@"', block = true, desc = "Neovim" },
+  { run = 'nvim %s', block = true, desc = "Neovim" }
 ]
 okular = [
-  { run = 'okular "$@"', block = false, orphan = true, desc = "Okular" },
+  { run = 'okular %s', block = false, orphan = true, desc = "Okular" }
 ]
 edge = [
-  { run = 'microsoft-edge-stable "$@"', block = false, orphan = true, desc = "Edge" },
+  { run = 'microsoft-edge-stable %s', block = false, orphan = true, desc = "Edge" }
 ]
 image = [
-  { run = 'xdg-open "$@"', block = false },
+  { run = 'xdg-open %s', block = false }
 ]
 video = [
-  { run = 'xdg-open "$@"', orphan = true, block = false },
+  { run = 'xdg-open %s', orphan = true, block = false }
 ]
 default = [
-  { run = 'xdg-open "$@"', block = false },
+  { run = 'xdg-open %s', block = false }
 ]
 
 [open]
 prepend_rules = [
+  # Force comic book archives to open with Okular instead of extracting
+  { url = "*.cbz", use = "okular" },
+  { url = "*.cbr", use = "okular" },
+  { url = "*.CBZ", use = "okular" },
+  { url = "*.CBR", use = "okular" },
+
   { mime = "application/pdf", use = "edge" },
-  { url = "*.{cbr,cbz}", use = "okular" },
+
   # Text & config files
   { mime = "text/*", use = "nvim" },
   { mime = "application/json", use = "nvim" },
   { mime = "application/xml", use = "nvim" },
   { mime = "application/javascript", use = "nvim" },
   { mime = "application/x-shellscript", use = "nvim" },
-  # Programming files by extension (fallback for undetected mimes)
+
+  # Programming files by extension
   { url = "*.{py,rs,go,c,cpp,h,hpp,java,kt,rb,php,swift,ts,tsx,jsx,vue,lua,vim,toml,yaml,yml,ini,cfg,conf,md,rst,txt,sh,bash,zsh,fish,css,scss,html,htm,sql}", use = "nvim" },
 ]

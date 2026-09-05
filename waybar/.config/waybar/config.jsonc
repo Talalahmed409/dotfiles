@@ -84,7 +84,7 @@
     "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
     "tooltip-format-disconnected": "Disconnected",
     "interval": 3,
-    "on-click": "nm-applet"
+    "on-click": "nm-connection-editor"
   },
   "hyprland/language": {
     "format": "  {}",

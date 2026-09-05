@@ -43,6 +43,8 @@ export XCURSOR_THEME="Breeze Dark"
 export XCURSOR_SIZE=24
 export LIBVA_DRIVER_NAME="radeonsi"
 export AMD_VULKAN_ICD="RADV"
+export EDITOR=nvim
+export VISUAL=nvim
 export SUDO_EDITOR=nvim
 fi
 

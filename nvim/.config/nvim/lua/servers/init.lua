@@ -1,19 +1,20 @@
-local capabilities = require("cmp_nvim_lsp").default_capabilities()
+local capabilities = require("blink.cmp").get_lsp_capabilities()
 
 -- Language Server Protocol (LSP)
 require "servers.lua_ls"(capabilities)
-require("servers.pyright")(capabilities)
-require("servers.gopls")(capabilities)
-require("servers.jsonls")(capabilities)
-require("servers.ts_ls")(capabilities)
-require("servers.bashls")(capabilities)
-require("servers.dockerls")(capabilities)
-require("servers.emmet_ls")(capabilities)
-require("servers.yamlls")(capabilities)
-require("servers.tailwindcss")(capabilities)
+require "servers.pyright"(capabilities)
+require "servers.gopls"(capabilities)
+require "servers.jsonls"(capabilities)
+require "servers.ts_ls"(capabilities)
+require "servers.bashls"(capabilities)
+require "servers.dockerls"(capabilities)
+require "servers.emmet_ls"(capabilities)
+require "servers.yamlls"(capabilities)
+require "servers.tailwindcss"(capabilities)
+require "servers.intelephense"(capabilities)
 
 -- Linters & Formatters
-require("servers.efm-langserver")(capabilities)
+require "servers.efm-langserver"(capabilities)
 
 vim.lsp.enable {
   "lua_ls",
@@ -27,4 +28,5 @@ vim.lsp.enable {
   "yamlls",
   "tailwindcss",
   "efm",
+  "intelephense",
 }

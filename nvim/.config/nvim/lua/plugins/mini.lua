@@ -1,16 +1,16 @@
 return {
   -- Text objects
-  { "echasnovski/mini.ai", version = "*", opts = {} },
+  { "nvim-mini/mini.ai", version = "*", opts = {} },
 
   -- icons provider
-  { "echasnovski/mini.icons", opts = {} },
+  { "nvim-mini/mini.icons", opts = {} },
 
   -- auto pairs for brackets/quotes
-  { "echasnovski/mini.pairs", opts = {} },
+  { "nvim-mini/mini.pairs", opts = {} },
 
   -- minimal notification UI
   {
-    "echasnovski/mini.notify",
+    "nvim-mini/mini.notify",
     opts = {
       window = {
         winblend = 0, -- transparency
@@ -25,7 +25,7 @@ return {
 
   -- fast surround editing
   {
-    "echasnovski/mini.surround",
+    "nvim-mini/mini.surround",
     opts = {
       mappings = {
         add = "sa", -- Add surrounding in Normal and Visual modes
@@ -41,7 +41,7 @@ return {
 
   -- better file explorer than oil (facts 🙂)
   {
-    "echasnovski/mini.files",
+    "nvim-mini/mini.files",
     version = false,
     config = function()
       require("mini.files").setup()

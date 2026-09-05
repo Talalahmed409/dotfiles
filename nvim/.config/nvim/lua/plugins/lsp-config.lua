@@ -7,7 +7,7 @@ return {
     },
     config = function()
       require("mason").setup()
-      require("mason-tool-installer").setup({
+      require("mason-tool-installer").setup {
         ensure_installed = {
           -- LSP Servers
           "bash-language-server",
@@ -20,6 +20,7 @@ return {
           "json-lsp",
           "yaml-language-server",
           "tailwindcss-language-server",
+          "intelephense",
           "efm",
 
           -- Formatters
@@ -40,7 +41,7 @@ return {
         auto_update = false,
         run_on_start = true,
         start_delay = 3000, -- 3 sec delay to avoid blocking startup
-      })
+      }
     end,
   },
 
@@ -50,7 +51,7 @@ return {
     dependencies = {
       "mason-org/mason.nvim",
       "creativenull/efmls-configs-nvim",
-      "hrsh7th/cmp-nvim-lsp",
+      "saghen/blink.cmp",
     },
     config = function()
       require("utils.diagnostics").setup()
