@@ -1,6 +1,7 @@
 local capabilities = require("blink.cmp").get_lsp_capabilities()
 
 -- Language Server Protocol (LSP)
+require "servers.html"(capabilities)
 require "servers.lua_ls"(capabilities)
 require "servers.pyright"(capabilities)
 require "servers.gopls"(capabilities)
@@ -17,6 +18,7 @@ require "servers.intelephense"(capabilities)
 require "servers.efm-langserver"(capabilities)
 
 vim.lsp.enable {
+  "html",
   "lua_ls",
   "pyright",
   "gopls",

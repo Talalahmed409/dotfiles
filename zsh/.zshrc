@@ -226,3 +226,4 @@ fi
 
 source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+export PATH="$HOME/.config/composer/vendor/bin:$PATH"

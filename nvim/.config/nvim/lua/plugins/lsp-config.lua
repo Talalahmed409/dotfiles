@@ -10,6 +10,7 @@ return {
       require("mason-tool-installer").setup {
         ensure_installed = {
           -- LSP Servers
+          "html-lsp",
           "bash-language-server",
           "docker-language-server",
           "emmet-ls",
