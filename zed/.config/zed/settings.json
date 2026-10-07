@@ -9,12 +9,13 @@
 {
   "agent": {
     "default_model": {
-      "provider": "zed.dev",
-      "model": "claude-sonnet-4-5",
+      "effort": "low",
+      "provider": "google",
+      "model": "gemini-3.5-flash",
       "enable_thinking": true
     },
     "favorite_models": [],
-    "default_profile": "write",
+    "default_profile": "ask",
     "model_parameters": []
   },
   "git_panel": {
